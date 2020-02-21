@@ -998,14 +998,14 @@ public class Login extends javax.swing.JFrame {
         }
         for (Alumno i : alumnos) {
             if (i instanceof Alumno_normal) {
-                Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(),i.getContra(),((Alumno_normal) i).getN_aprendizaje()};
+                Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(), i.getContra(), ((Alumno_normal) i).getN_aprendizaje()};
                 m.addRow(pe);
             }
         }
         TablaAlumnos.setModel(m);
 
     }
-    
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         alumnos.add(new Alumno_normal(1, "manola", "ds", "dsd", "d", "123", 2, 4));
         alumnos.add(new Alumno_normal(1, "burra", "ds", "dsd", "pato", "123", 2, 4));
@@ -1076,22 +1076,38 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_tuto_horaActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-     //int hora, int aula, int dia, int mes, int año, String clase, String tema, Tutor tutor
-        ((Tutor)alumnos.get(tutor)).getTutorias().add(new Tutoria());
+       
+        String clase = (String) tuto_clase.getSelectedItem();
+        String hora = (String) tuto_hora.getSelectedItem();
+        int horaa=0;
+        if (hora.equals("7:00 am")) {
+            horaa = 7;
+        } else if (hora.equals("8:30 am")) {
+            horaa = 8;
+        } else if (hora.equals("10:10 am")) {
+            horaa = 10;
+        } else if (hora.equals("11:30 am")) {
+            horaa = 11;
+        } else if (hora.equals("1:00 pm")) {
+            horaa = 1;
+        } else if (hora.equals("2:20 pm")) {
+            horaa = 2;
+        } else if (hora.equals("3:40 pm")) {
+            horaa = 3;
+        } else if (hora.equals("5:10 pm")) {
+            horaa = 5;
+        } else if (hora.equals("7:00 pm")) {
+            horaa = 7;
+        }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
+         //int hora, int aula, int dia, int mes, int año, String clase, String tema, Tutor tutor
+        ((Tutor) alumnos.get(tutor)).getTutorias().add(new Tutoria(hora,Integer.parseInt(tuto_aula.getText()),));
+
+
     }//GEN-LAST:event_jButton13ActionPerformed
-int tutor=-1;
+    int tutor = -1;
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-       tutor= TablaTutores.getSelectedRow(); 
+        tutor = TablaTutores.getSelectedRow();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
