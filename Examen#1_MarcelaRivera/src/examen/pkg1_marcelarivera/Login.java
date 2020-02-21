@@ -843,25 +843,57 @@ public class Login extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         int filaEliminar = TablaAlumnos.getSelectedRow();
        if(filaEliminar>=0){
+           System.out.println("dsa");
         alumnos.remove(filaEliminar);
         llenarTabla();    
-       }
-       
+        
+       }  
 
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-  System.out.println("dsa "+modi_usuario_normal1.getText()+"   dsa");
         int filamodi = TablaAlumnos.getSelectedRow();
+        System.out.println(filamodi);
        if(filamodi>=0){
-           if(modi_usuario_normal1.getText().equals("")){
-               
+           if(modi_nombre_normal.getText().equals("")){
            }else{
                alumnos.get(filamodi).setNombre(modi_nombre_normal.getText());
            }
            
-           
+            if(modi_aprendizaje_normal1.getText().equals("")){
+           }else{
+               ((Alumno_normal)alumnos.get(filamodi)).setN_aprendizaje(Integer.parseInt(modi_aprendizaje_normal1.getText()));
+           }
+            
+             if(modi_carrera_normal1.getText().equals("")){
+           }else{
+               alumnos.get(filamodi).setCarrera(modi_carrera_normal1.getText());
+           }
+             
+                if(modi_contra_normal1.getText().equals("")){
+           }else{
+               alumnos.get(filamodi).setContra(modi_contra_normal1.getText());
+           }
+                
+                     if(modi_cuenta_normal1.getText().equals("")){
+           }else{
+                ((Alumno_normal)alumnos.get(filamodi)).setN_cuenta(Integer.parseInt(modi_cuenta_normal1.getText()));
+           }
+                   if(modi_edad_normal1.getText().equals("")){
+           }else{
+                ((Alumno_normal)alumnos.get(filamodi)).setEdad(Integer.parseInt(modi_edad_normal1.getText()));
+           }
+                   if(modi_lugar_normal1.getText().equals("")){
+           }else{
+                
+                       alumnos.get(filamodi).setLugarNacimiento(modi_lugar_normal1.getText());
+           }
+                    if(modi_usuario_normal1.getText().equals("")){
+           }else{
+                 alumnos.get(filamodi).setUsuario(modi_usuario_normal1.getText());
+           }
        }
+       llenarTabla();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
