@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Tutor extends Alumno{
 
    private ArrayList<String> clasesDadas=new ArrayList();
+   private ArrayList<Tutoria> tutorias=new ArrayList();
+
    private double ganacia;
    private int n_enseña,n_tutoriasDadas=0;
     
@@ -24,6 +26,14 @@ public class Tutor extends Alumno{
         super(nombre, edad, carrera, lugarNacimiento, n_cuenta, usuario, contra);
         this.ganacia = ganacia;
         this.n_enseña = n_enseña;
+    }
+
+    public ArrayList<Tutoria> getTutorias() {
+        return tutorias;
+    }
+
+    public void setTutorias(ArrayList<Tutoria> tutorias) {
+        this.tutorias = tutorias;
     }
 
     public ArrayList<String> getClasesDadas() {
