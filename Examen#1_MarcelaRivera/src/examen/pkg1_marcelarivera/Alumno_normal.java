@@ -19,10 +19,13 @@ public class Alumno_normal extends Alumno{
     }
 
     public Alumno_normal(int n_aprendizaje, String nombre, String carrera, String lugarNacimiento, String usuario, String contra, int edad, int n_cuenta) {
-        super();
+         super(nombre, edad, carrera, lugarNacimiento, n_cuenta, usuario, contra);
         this.conocimiento = setConocimiento(conocimiento);
         this.n_aprendizaje = n_aprendizaje;
     }
+
+
+    
 
     public int getConocimiento() {
         return conocimiento;

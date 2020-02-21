@@ -21,7 +21,7 @@ public class Tutor extends Alumno{
     }
 
     public Tutor(double ganacia, int n_enseña, String nombre, String carrera, String lugarNacimiento, String usuario, String contra, int edad, int n_cuenta) {
-        super();
+        super(nombre, edad, carrera, lugarNacimiento, n_cuenta, usuario, contra);
         this.ganacia = ganacia;
         this.n_enseña = n_enseña;
     }
