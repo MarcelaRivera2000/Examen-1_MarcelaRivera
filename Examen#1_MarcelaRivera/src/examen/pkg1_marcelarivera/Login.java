@@ -22,7 +22,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(this);
-        
+
     }
 
     /**
@@ -154,27 +154,27 @@ public class Login extends javax.swing.JFrame {
         Tablatutor2 = new javax.swing.JTable();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
-        modi_carrera_normal2 = new javax.swing.JTextField();
-        modi_nombre_normal1 = new javax.swing.JTextField();
-        modi_lugar_normal2 = new javax.swing.JTextField();
+        modi_carrera_tuto = new javax.swing.JTextField();
+        modi_nombre_tuto = new javax.swing.JTextField();
+        modi_lugar_tuto = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        modi_edad_normal2 = new javax.swing.JTextField();
+        modi_edad_tuto = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        modi_cuenta_normal2 = new javax.swing.JTextField();
-        modi_aprendizaje_normal2 = new javax.swing.JTextField();
-        modi_usuario_normal2 = new javax.swing.JTextField();
+        modi_cuenta_tuto = new javax.swing.JTextField();
+        modi_ense_tuto = new javax.swing.JTextField();
+        modi_usuario_tuto = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
-        modi_contra_normal2 = new javax.swing.JTextField();
+        modi_contra_tuto = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        TablaTutores1 = new javax.swing.JTable();
+        tablatutorias = new javax.swing.JTable();
         jButton22 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -825,6 +825,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jScrollPane4.setViewportView(TablaTutores);
+        if (TablaTutores.getColumnModel().getColumnCount() > 0) {
+            TablaTutores.getColumnModel().getColumn(7).setHeaderValue("Nivel Enseñanza");
+        }
 
         jButton12.setText("Agregar Tutor");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -1052,7 +1055,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel44.setText("Contraseña:");
 
-        jLabel45.setText("Nivel Aprendizaje:");
+        jLabel45.setText("Nivel Enseñamza:");
 
         jLabel46.setText("Numero de cuenta:");
 
@@ -1080,10 +1083,10 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel42))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(modi_carrera_normal2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
-                            .addComponent(modi_edad_normal2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(modi_nombre_normal1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(modi_lugar_normal2))
+                            .addComponent(modi_carrera_tuto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
+                            .addComponent(modi_edad_tuto, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(modi_nombre_tuto, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(modi_lugar_tuto))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel46)
@@ -1092,10 +1095,10 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel45))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(modi_usuario_normal2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-                            .addComponent(modi_cuenta_normal2)
-                            .addComponent(modi_contra_normal2)
-                            .addComponent(modi_aprendizaje_normal2))
+                            .addComponent(modi_usuario_tuto, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                            .addComponent(modi_cuenta_tuto)
+                            .addComponent(modi_contra_tuto)
+                            .addComponent(modi_ense_tuto))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
@@ -1123,19 +1126,19 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(modi_nombre_normal1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modi_nombre_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel39))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(modi_edad_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modi_edad_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel40))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(modi_carrera_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modi_carrera_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel41))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(modi_lugar_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modi_lugar_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel42)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1143,21 +1146,21 @@ public class Login extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel46)
-                                    .addComponent(modi_cuenta_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(modi_cuenta_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(modi_usuario_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(modi_usuario_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(modi_contra_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(modi_contra_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel44))
                                 .addGap(18, 18, 18))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jButton18)
                                 .addGap(7, 7, 7)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(modi_aprendizaje_normal2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modi_ense_tuto, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel45)
                             .addComponent(jButton17))))
                 .addContainerGap(21, Short.MAX_VALUE))
@@ -1165,23 +1168,30 @@ public class Login extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Modificar Datos", jPanel2);
 
-        TablaTutores1.setModel(new javax.swing.table.DefaultTableModel(
+        tablatutorias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Nombre", "Edad", "Carrera", "Lugar Nacimiento", "Numero Cuenta", "Usuario", "Contraseña", "Nivel Enseñanza"
+                "Dia", "Mes", "Año", "Hora", "Tema", "Aula", "Tema"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jScrollPane8.setViewportView(TablaTutores1);
+        jScrollPane8.setViewportView(tablatutorias);
 
         jButton22.setText("Dar tutoria");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
@@ -1296,7 +1306,7 @@ public class Login extends javax.swing.JFrame {
                 carrera_normal.getText(), lugar_normal.getText(), usuario_normal.getText(),
                 contra_normal.getText(), Integer.parseInt(edad_normal.getText()), Integer.parseInt(cuenta_normal.getText())));
         JOptionPane.showMessageDialog(this, "Se ingreso correctamente");
-        
+
         AlumnoNormal.pack();
         this.pack();
         AlumnoNormal.setVisible(false);
@@ -1305,7 +1315,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        alumnos.add(new Tutor(Double.parseDouble(ganancia_tutor.getText()), Integer.parseInt(nivel_tutor.getText()), nombre_tutor.getText(), carrera_tutor.getText(), lugar_tutor.getText(), usuario_tutor.getText(), contra_tutor.getText(),
+        alumnos.add(new Tutor(Integer.parseInt(nivel_tutor.getText()), nombre_tutor.getText(), carrera_tutor.getText(), lugar_tutor.getText(), usuario_tutor.getText(), contra_tutor.getText(),
                 Integer.parseInt(edad_tutor.getText()), Integer.parseInt(cuenta_tutor.getText())));
         if (Mate.isSelected()) {
             ((Tutor) alumnos.get(alumnos.size() - 1)).getClasesDadas().add("Matematicas");
@@ -1332,9 +1342,9 @@ public class Login extends javax.swing.JFrame {
         if (antro.isSelected()) {
             ((Tutor) alumnos.get(alumnos.size() - 1)).getClasesDadas().add("Antropologia");
         }
-        
+
         JOptionPane.showMessageDialog(this, "Se ingreso correctamente");
-        
+
         Tutor.pack();
         this.pack();
         Tutor.setVisible(false);
@@ -1356,7 +1366,7 @@ public class Login extends javax.swing.JFrame {
         CrearCuenta.setVisible(false);
         Tutor.setLocationRelativeTo(this);
         Tutor.setVisible(true);
-        
+
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -1387,13 +1397,17 @@ public class Login extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton9ActionPerformed
-    
+
     public void llenarTabla() {
         DefaultTableModel m = (DefaultTableModel) TablaAlumnos.getModel();
         DefaultTableModel m2 = (DefaultTableModel) TablaTutores.getModel();
-        DefaultTableModel m3 = (DefaultTableModel) TablaTutores1.getModel();
+        DefaultTableModel m3 = (DefaultTableModel) tablatutorias.getModel();
+        DefaultTableModel m4 = (DefaultTableModel) TablaExamen.getModel();
         
-        for (int i = m.getRowCount() - 1; i >= 0; i--) {
+        for (int i = m4.getRowCount() - 1; i >= 0; i--) {
+            m4.removeRow(i);
+        }
+        for (int i = m3.getRowCount() - 1; i >= 0; i--) {
             m3.removeRow(i);
         }
         for (int i = m.getRowCount() - 1; i >= 0; i--) {
@@ -1402,12 +1416,7 @@ public class Login extends javax.swing.JFrame {
         for (int i = m2.getRowCount() - 1; i >= 0; i--) {
             m2.removeRow(i);
         }
-         for (Alumno i : alumnos) {
-            if (i instanceof ) {
-                Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(), i.getContra(), ((Alumno_normal) i).getN_aprendizaje()};
-                m.addRow(pe);
-            }
-        }
+    
         for (Alumno i : alumnos) {
             if (i instanceof Alumno_normal) {
                 Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(), i.getContra(), ((Alumno_normal) i).getN_aprendizaje()};
@@ -1419,17 +1428,42 @@ public class Login extends javax.swing.JFrame {
                 Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(), i.getContra(), ((Tutor) i).getN_enseña()};
                 m2.addRow(pe);
             }
+            
         }
+        if(alumnos.get(usuarioUsado) instanceof Alumno_normal){
+            for (Examenes i : ((Alumno_normal)alumnos.get(usuarioUsado)).getExamenes()) {
+             Object[] pe = {i.getMateria(),i.getTema(),i.getValor()};
+                m4.addRow(pe);
+            
+            
+        }
+        }
+      
+        
+        
+        
+        
+        
+        if(alumnos.get(usuarioUsado) instanceof Tutor){
+            for (Tutoria i : ((Tutor) alumnos.get(usuarioUsado)).getTutorias()) {
+            Object[] pe = {i.getDia(), i.getMes(), i.getAño(), i.getHora(), i.getHora(), i.getTema(), i.getAula()};
+            m3.addRow(pe);
+        }
+          
+            
+             }
         TablaTutores.setModel(m2);
         TablaAlumnos.setModel(m);
         Tablatutor2.setModel(m2);
-        
+        tablatutorias.setModel(m3);
+        TablaExamen.setModel(m4);
+
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         alumnos.add(new Alumno_normal(1, "manola", "ds", "dsd", "d", "123", 2, 4));
         alumnos.add(new Alumno_normal(1, "burra", "ds", "dsd", "patoo", "123", 2, 4));
-        alumnos.add(new Tutor(45, 1, "puta", "ds", "dsd", "pato", "123", 2, 4));
+        alumnos.add(new Tutor(1, "puta", "ds", "dsd", "pato", "123", 2, 4));
         Login.pack();
         this.setVisible(false);
         Login.setLocationRelativeTo(this);
@@ -1442,35 +1476,36 @@ public class Login extends javax.swing.JFrame {
             System.out.println("dsa");
             alumnos.remove(filaEliminar);
             llenarTabla();
-            
+
         }
 
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         int filamodi = TablaAlumnos.getSelectedRow();
+
         System.out.println(filamodi);
         if (filamodi >= 0) {
             if (modi_nombre_normal.getText().equals("")) {
             } else {
                 alumnos.get(filamodi).setNombre(modi_nombre_normal.getText());
             }
-            
+
             if (modi_aprendizaje_normal1.getText().equals("")) {
             } else {
                 ((Alumno_normal) alumnos.get(filamodi)).setN_aprendizaje(Integer.parseInt(modi_aprendizaje_normal1.getText()));
             }
-            
+
             if (modi_carrera_normal1.getText().equals("")) {
             } else {
                 alumnos.get(filamodi).setCarrera(modi_carrera_normal1.getText());
             }
-            
+
             if (modi_contra_normal1.getText().equals("")) {
             } else {
                 alumnos.get(filamodi).setContra(modi_contra_normal1.getText());
             }
-            
+
             if (modi_cuenta_normal1.getText().equals("")) {
             } else {
                 ((Alumno_normal) alumnos.get(filamodi)).setN_cuenta(Integer.parseInt(modi_cuenta_normal1.getText()));
@@ -1481,7 +1516,7 @@ public class Login extends javax.swing.JFrame {
             }
             if (modi_lugar_normal1.getText().equals("")) {
             } else {
-                
+
                 alumnos.get(filamodi).setLugarNacimiento(modi_lugar_normal1.getText());
             }
             if (modi_usuario_normal1.getText().equals("")) {
@@ -1524,17 +1559,17 @@ public class Login extends javax.swing.JFrame {
         int dia = Integer.parseInt(tokens[1]);
         int anio = Integer.parseInt(tokens[2]);
         JOptionPane.showMessageDialog(this, "Su tutoria fue configurada a la perfecccion");
-        
+
     }//GEN-LAST:event_jButton13ActionPerformed
-    
+
     int tutor = -1, alumno = -1;
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        
+
         tutor = TablaTutores.getSelectedRow();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-        
+llenarTabla();
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1555,7 +1590,7 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Reprobo el examen");
             }
         }
-        
+
 
     }//GEN-LAST:event_jButton14ActionPerformed
 
@@ -1567,12 +1602,14 @@ public class Login extends javax.swing.JFrame {
         String clase = (String) exam_clase1.getSelectedItem();
         String tema = exam_tema.getText();
         int valor = Integer.parseInt(exam_puntaj.getText());
-        
+
         for (Alumno i : alumnos) {
             if (i instanceof Alumno_normal) {
                 ((Alumno_normal) i).getExamenes().add(new Examenes(clase, tema, valor));
+                System.out.println("");
             }
         }
+      
         JOptionPane.showMessageDialog(this, "Su examen se registro con exito");
         Examen.pack();
         this.pack();
@@ -1587,13 +1624,13 @@ public class Login extends javax.swing.JFrame {
         MenuAlumnoNormal.setVisible(false);
         this.setLocationRelativeTo(this);
         this.setVisible(true);
-        
+
 
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jTabbedPane2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane2MouseClicked
-    
-        
+
+
     }//GEN-LAST:event_jTabbedPane2MouseClicked
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
@@ -1609,53 +1646,80 @@ public class Login extends javax.swing.JFrame {
         if (filaEliminar >= 0) {
             alumnos.remove(filaEliminar);
             llenarTabla();
-            
+
         }
 
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-       int filamodi = Tablatutor2.getSelectedRow();
+        int p = Tablatutor2.getSelectedRow();
+
+        int cont = 0, filamodi = 0;
         System.out.println(filamodi);
-        if (filamodi >= 0) {
-            if (modi_nombre_normal1.getText().equals("")) {
+        int cont2 = 0;
+
+        for (int i = 0; i < alumnos.size(); i++) {
+            if (alumnos.get(i) instanceof Tutor) {
+                if (cont == p) {
+                    break;
+                }
+                cont++;
             } else {
-                alumnos.get(filamodi).setNombre(modi_nombre_normal1.getText());
+                cont2++;
             }
 
-            if (modi_carrera_normal2.getText().equals("")) {
+        }
+        filamodi = cont + cont2;
+        System.out.println(filamodi);
+        if (filamodi >= 0) {
+            if (modi_nombre_tuto.getText().equals("")) {
             } else {
-                alumnos.get(filamodi).setCarrera(modi_carrera_normal2.getText());
+
+                alumnos.get(filamodi).setNombre(modi_nombre_tuto.getText());
             }
-            
-            if (modi_contra_normal2.getText().equals("")) {
+
+            if (modi_carrera_tuto.getText().equals("")) {
             } else {
-                alumnos.get(filamodi).setContra(modi_contra_normal2.getText());
+                alumnos.get(filamodi).setCarrera(modi_carrera_tuto.getText());
             }
-            
-            if (modi_cuenta_normal2.getText().equals("")) {
+
+            if (modi_contra_tuto.getText().equals("")) {
             } else {
-                ((Alumno_normal) alumnos.get(filamodi)).setN_cuenta(Integer.parseInt(modi_cuenta_normal2.getText()));
+                alumnos.get(filamodi).setContra(modi_contra_tuto.getText());
             }
-            if (modi_edad_normal2.getText().equals("")) {
+
+            if (modi_cuenta_tuto.getText().equals("")) {
             } else {
-                ((Alumno_normal) alumnos.get(filamodi)).setEdad(Integer.parseInt(modi_edad_normal2.getText()));
+                ((Tutor) alumnos.get(filamodi)).setN_cuenta(Integer.parseInt(modi_cuenta_tuto.getText()));
             }
-            if (modi_lugar_normal2.getText().equals("")) {
+            if (modi_edad_tuto.getText().equals("")) {
             } else {
-                
-                alumnos.get(filamodi).setLugarNacimiento(modi_lugar_normal2.getText());
+                ((Tutor) alumnos.get(filamodi)).setEdad(Integer.parseInt(modi_edad_tuto.getText()));
             }
-            if (modi_usuario_normal2.getText().equals("")) {
+            if (modi_lugar_tuto.getText().equals("")) {
             } else {
-                alumnos.get(filamodi).setUsuario(modi_usuario_normal2.getText());
+
+                alumnos.get(filamodi).setLugarNacimiento(modi_lugar_tuto.getText());
+            }
+            if (modi_usuario_tuto.getText().equals("")) {
+            } else {
+                alumnos.get(filamodi).setUsuario(modi_usuario_tuto.getText());
             }
         }
         llenarTabla();
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        // TODO add your handling code here:
+        int p = tablatutorias.getSelectedRow();
+        for (Alumno_normal i : ((Tutor) alumnos.get(usuarioUsado)).getTutorias().get(p).getAlumnos()) {
+            int t = 0 + r.nextInt(99);
+            i.setConocimiento(t);
+
+        }
+
+        ((Tutor) alumnos.get(usuarioUsado)).setGanacia(270);
+
+
     }//GEN-LAST:event_jButton22ActionPerformed
 
     /**
@@ -1704,7 +1768,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTable TablaAlumnos;
     private javax.swing.JTable TablaExamen;
     private javax.swing.JTable TablaTutores;
-    private javax.swing.JTable TablaTutores1;
     private javax.swing.JTable Tablatutor2;
     private javax.swing.JFrame Tutor;
     private javax.swing.JCheckBox antro;
@@ -1810,27 +1873,28 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField lugar_normal;
     private javax.swing.JTextField lugar_tutor;
     private javax.swing.JTextField modi_aprendizaje_normal1;
-    private javax.swing.JTextField modi_aprendizaje_normal2;
     private javax.swing.JTextField modi_carrera_normal1;
-    private javax.swing.JTextField modi_carrera_normal2;
+    private javax.swing.JTextField modi_carrera_tuto;
     private javax.swing.JTextField modi_contra_normal1;
-    private javax.swing.JTextField modi_contra_normal2;
+    private javax.swing.JTextField modi_contra_tuto;
     private javax.swing.JTextField modi_cuenta_normal1;
-    private javax.swing.JTextField modi_cuenta_normal2;
+    private javax.swing.JTextField modi_cuenta_tuto;
     private javax.swing.JTextField modi_edad_normal1;
-    private javax.swing.JTextField modi_edad_normal2;
+    private javax.swing.JTextField modi_edad_tuto;
+    private javax.swing.JTextField modi_ense_tuto;
     private javax.swing.JTextField modi_lugar_normal1;
-    private javax.swing.JTextField modi_lugar_normal2;
+    private javax.swing.JTextField modi_lugar_tuto;
     private javax.swing.JTextField modi_nombre_normal;
-    private javax.swing.JTextField modi_nombre_normal1;
+    private javax.swing.JTextField modi_nombre_tuto;
     private javax.swing.JTextField modi_usuario_normal1;
-    private javax.swing.JTextField modi_usuario_normal2;
+    private javax.swing.JTextField modi_usuario_tuto;
     private javax.swing.JCheckBox musica;
     private javax.swing.JTextField nivel_tutor;
     private javax.swing.JTextField nombre_normal;
     private javax.swing.JTextField nombre_tutor;
     private javax.swing.JCheckBox progra;
     private javax.swing.JCheckBox sociologia;
+    private javax.swing.JTable tablatutorias;
     private javax.swing.JTextField tuto_aula;
     private javax.swing.JComboBox<String> tuto_clase;
     private datechooser.beans.DateChooserCombo tuto_fecha;

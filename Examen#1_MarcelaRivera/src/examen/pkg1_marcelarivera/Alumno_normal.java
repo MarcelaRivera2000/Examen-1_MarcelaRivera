@@ -23,6 +23,7 @@ public class Alumno_normal extends Alumno{
         this.conocimiento = setConocimiento(conocimiento);
         this.n_aprendizaje = n_aprendizaje;
     }
+    
 
 
     
@@ -45,11 +46,11 @@ public class Alumno_normal extends Alumno{
         this.n_aprendizaje = n_aprendizaje;
     }
 
-    public ArrayList getExamenes() {
+    public ArrayList<Examenes> getExamenes() {
         return examenes;
     }
 
-    public void setExamenes(ArrayList examenes) {
+    public void setExamenes(ArrayList<Examenes> examenes) {
         this.examenes = examenes;
     }
 

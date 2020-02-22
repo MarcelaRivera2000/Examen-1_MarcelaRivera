@@ -22,9 +22,9 @@ public class Tutor extends Alumno{
     public Tutor() {
     }
 
-    public Tutor(double ganacia, int n_enseña, String nombre, String carrera, String lugarNacimiento, String usuario, String contra, int edad, int n_cuenta) {
+    public Tutor( int n_enseña, String nombre, String carrera, String lugarNacimiento, String usuario, String contra, int edad, int n_cuenta) {
         super(nombre, edad, carrera, lugarNacimiento, n_cuenta, usuario, contra);
-        this.ganacia = ganacia;
+        this.ganacia = setGanacia(ganacia);
         this.n_enseña = n_enseña;
     }
 
@@ -48,8 +48,9 @@ public class Tutor extends Alumno{
         return ganacia;
     }
 
-    public void setGanacia(double ganacia) {
-        this.ganacia = ganacia;
+    public double setGanacia(double ganacia) {
+        ganacia+=this.ganacia ;
+        return ganacia;
     }
 
     public int getN_enseña() {
