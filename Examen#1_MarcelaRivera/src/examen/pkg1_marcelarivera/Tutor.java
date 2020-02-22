@@ -73,7 +73,13 @@ public class Tutor extends Alumno{
     public String toString() {
         return "Tutor{" + "clasesDadas=" + clasesDadas + ", ganacia=" + ganacia + ", n_ense\u00f1a=" + n_enseña + ", n_tutoriasDadas=" + n_tutoriasDadas + '}';
     }
-    
+   @Override
+     public boolean examen(){
+       boolean f=false;
+      
+       return f;
+       
+    }
     
     
     

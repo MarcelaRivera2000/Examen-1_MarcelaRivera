@@ -9,7 +9,7 @@ package examen.pkg1_marcelarivera;
  *
  * @author Mvrivera
  */
-public class Alumno {
+public abstract class Alumno {
     private String nombre,carrera,lugarNacimiento,usuario,contra;
     private int edad,n_cuenta;
 
@@ -86,7 +86,7 @@ public class Alumno {
     public String toString() {
         return "Alumno{" + "nombre=" + nombre + ", carrera=" + carrera + ", lugarNacimiento=" + lugarNacimiento + ", usuario=" + usuario + ", contra=" + contra + ", edad=" + edad + ", n_cuenta=" + n_cuenta + '}';
     }
-    
+     public abstract boolean examen();
     
     
 }

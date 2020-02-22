@@ -22,7 +22,9 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(this);
-
+   alumnos.add(new Alumno_normal(1, "manola", "ds", "dsd", "d", "123", 2, 4));
+        alumnos.add(new Alumno_normal(1, "burra", "ds", "dsd", "patoo", "123", 2, 4));
+        alumnos.add(new Tutor(1, "puta", "ds", "dsd", "pato", "123", 2, 4));
     }
 
     /**
@@ -1403,20 +1405,20 @@ public class Login extends javax.swing.JFrame {
         DefaultTableModel m2 = (DefaultTableModel) TablaTutores.getModel();
         DefaultTableModel m3 = (DefaultTableModel) tablatutorias.getModel();
         DefaultTableModel m4 = (DefaultTableModel) TablaExamen.getModel();
-        
-        for (int i = m4.getRowCount() - 1; i >= 0; i--) {
-            m4.removeRow(i);
-        }
-        for (int i = m3.getRowCount() - 1; i >= 0; i--) {
-            m3.removeRow(i);
-        }
+
         for (int i = m.getRowCount() - 1; i >= 0; i--) {
             m.removeRow(i);
         }
         for (int i = m2.getRowCount() - 1; i >= 0; i--) {
             m2.removeRow(i);
         }
-    
+        for (int i = m3.getRowCount() - 1; i >= 0; i--) {
+            m3.removeRow(i);
+        }
+        for (int i = m4.getRowCount() - 1; i >= 0; i--) {
+            m4.removeRow(i);
+        }
+
         for (Alumno i : alumnos) {
             if (i instanceof Alumno_normal) {
                 Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(), i.getContra(), ((Alumno_normal) i).getN_aprendizaje()};
@@ -1428,42 +1430,32 @@ public class Login extends javax.swing.JFrame {
                 Object[] pe = {i.getNombre(), i.getEdad(), i.getCarrera(), i.getLugarNacimiento(), i.getN_cuenta(), i.getUsuario(), i.getContra(), ((Tutor) i).getN_enseña()};
                 m2.addRow(pe);
             }
-            
+
         }
-        if(alumnos.get(usuarioUsado) instanceof Alumno_normal){
-            for (Examenes i : ((Alumno_normal)alumnos.get(usuarioUsado)).getExamenes()) {
-             Object[] pe = {i.getMateria(),i.getTema(),i.getValor()};
+        if (alumnos.get(usuarioUsado) instanceof Alumno_normal) {
+            for (Examenes i : ((Alumno_normal) alumnos.get(usuarioUsado)).getExamenes()) {
+                Object[] pe = {i.getMateria(), i.getTema(), i.getValor()};
                 m4.addRow(pe);
-            
-            
+            }
         }
-        }
-      
-        
-        
-        
-        
-        
-        if(alumnos.get(usuarioUsado) instanceof Tutor){
+
+        if (alumnos.get(usuarioUsado) instanceof Tutor) {
             for (Tutoria i : ((Tutor) alumnos.get(usuarioUsado)).getTutorias()) {
-            Object[] pe = {i.getDia(), i.getMes(), i.getAño(), i.getHora(), i.getHora(), i.getTema(), i.getAula()};
-            m3.addRow(pe);
-        }
-          
+                Object[] pe = {i.getDia(), i.getMes(), i.getAño(), i.getHora(), i.getHora(), i.getTema(), i.getAula()};
+                m3.addRow(pe);
+            }
             
-             }
+        }
         TablaTutores.setModel(m2);
-        TablaAlumnos.setModel(m);
         Tablatutor2.setModel(m2);
+        TablaAlumnos.setModel(m);
         tablatutorias.setModel(m3);
         TablaExamen.setModel(m4);
 
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        alumnos.add(new Alumno_normal(1, "manola", "ds", "dsd", "d", "123", 2, 4));
-        alumnos.add(new Alumno_normal(1, "burra", "ds", "dsd", "patoo", "123", 2, 4));
-        alumnos.add(new Tutor(1, "puta", "ds", "dsd", "pato", "123", 2, 4));
+
         Login.pack();
         this.setVisible(false);
         Login.setLocationRelativeTo(this);
@@ -1558,6 +1550,10 @@ public class Login extends javax.swing.JFrame {
         int mes = Integer.parseInt(tokens[0]);
         int dia = Integer.parseInt(tokens[1]);
         int anio = Integer.parseInt(tokens[2]);
+       
+        ((Tutor)alumnos.get(2)).getTutorias().add(new Tutoria(horaa, Integer.parseInt(tuto_aula.getText()), dia, mes, anio, clase, tuto_tema.getText(), (Tutor)alumnos.get(2)));
+        
+        
         JOptionPane.showMessageDialog(this, "Su tutoria fue configurada a la perfecccion");
 
     }//GEN-LAST:event_jButton13ActionPerformed
@@ -1569,7 +1565,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-llenarTabla();
+        llenarTabla();
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1582,9 +1578,11 @@ llenarTabla();
     Random r = new Random();
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         int posi = TablaExamen.getSelectedRow();
-        int requerimiento = 1 + r.nextInt(99);
-        if (posi > 0) {
-            if (((Alumno_normal) alumnos.get(usuarioUsado)).getConocimiento() > requerimiento) {
+        int requerimiento = 0+r.nextInt(99);
+        if (posi >= 0) {
+            Alumno_normal a=new Alumno_normal();
+            System.out.println("aqui: "+a.examen(requerimiento));
+            if (a.examen(requerimiento)) {
                 JOptionPane.showMessageDialog(this, "Aprobo el examen");
             } else {
                 JOptionPane.showMessageDialog(this, "Reprobo el examen");
@@ -1609,7 +1607,7 @@ llenarTabla();
                 System.out.println("");
             }
         }
-      
+
         JOptionPane.showMessageDialog(this, "Su examen se registro con exito");
         Examen.pack();
         this.pack();
@@ -1630,6 +1628,8 @@ llenarTabla();
 
     private void jTabbedPane2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane2MouseClicked
 
+        
+        
 
     }//GEN-LAST:event_jTabbedPane2MouseClicked
 
@@ -1642,7 +1642,25 @@ llenarTabla();
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        int filaEliminar = Tablatutor2.getSelectedRow();
+    int p = Tablatutor2.getSelectedRow();
+
+        int cont = 0, filaEliminar = 0;
+
+        int cont2 = 0;
+
+        for (int i = 0; i < alumnos.size(); i++) {
+            if (alumnos.get(i) instanceof Tutor) {
+                if (cont == p) {
+                    break;
+                }
+                cont++;
+            } else {
+                cont2++;
+            }
+
+        }
+        filaEliminar = cont + cont2;
+       
         if (filaEliminar >= 0) {
             alumnos.remove(filaEliminar);
             llenarTabla();
