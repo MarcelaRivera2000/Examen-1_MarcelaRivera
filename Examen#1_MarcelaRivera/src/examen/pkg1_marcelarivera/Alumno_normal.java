@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Alumno_normal extends Alumno{
     private int conocimiento,n_aprendizaje;
-    private ArrayList examenes=new ArrayList();
+    private ArrayList<Examenes>examenes=new ArrayList();
 
     public Alumno_normal() {
     }
