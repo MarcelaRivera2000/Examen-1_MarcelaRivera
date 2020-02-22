@@ -24,7 +24,12 @@ public class Login extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
    alumnos.add(new Alumno_normal(1, "manola", "ds", "dsd", "d", "123", 2, 4));
         alumnos.add(new Alumno_normal(1, "burra", "ds", "dsd", "patoo", "123", 2, 4));
-        alumnos.add(new Tutor(1, "puta", "ds", "dsd", "pato", "123", 2, 4));
+        alumnos.add(new Tutor(1, "Pancha", "ds", "dsd", "pato", "123", 2, 4));
+          alumnos.add(new Tutor(1, "Carlos", "ds", "dsd", "pato", "123", 2, 4));
+            alumnos.add(new Tutor(1, "Bro", "ds", "dsd", "pato", "123", 2, 4));
+            for (Alumno i : alumnos) {
+                System.out.println(i.getUsuario()+" "+i.getContra());
+        }
     }
 
     /**
@@ -1732,12 +1737,11 @@ public class Login extends javax.swing.JFrame {
         for (Alumno_normal i : ((Tutor) alumnos.get(usuarioUsado)).getTutorias().get(p).getAlumnos()) {
             int t = 0 + r.nextInt(99);
             i.setConocimiento(t);
-
         }
 
         ((Tutor) alumnos.get(usuarioUsado)).setGanacia(270);
-
-
+        ((Tutor) alumnos.get(usuarioUsado)).getTutorias().remove(p);
+        llenarTabla();
     }//GEN-LAST:event_jButton22ActionPerformed
 
     /**
